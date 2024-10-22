@@ -3,20 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My New PWA</title>
+  <title>Urban Meme PWA</title>
+  
+  <!-- Link to the manifest file for the PWA -->
   <link rel="manifest" href="manifest.json">
+  
+  <!-- PWA service worker registration -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js').then(function() {
-        console.log('Service Worker registered.');
+        console.log('Service Worker registered successfully.');
       }).catch(function(error) {
-        console.log('Service Worker registration failed:', error);
+        console.error('Service Worker registration failed:', error);
       });
     }
   </script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+    }
+    a {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My New PWA</h1>
-  <p>This is my new Progressive Web App hosted on GitHub Pages.</p>
+  <h1>Welcome to Urban Meme PWA</h1>
+  <p>This is a Progressive Web App hosted on GitHub Pages.</p>
+  
+  <!-- Link to the Shiny app -->
+  <p><a href="https://mohammedsal.shinyapps.io/warf_log/" target="_blank">Go to Warf Log Shiny App</a></p>
+  
 </body>
 </html>
